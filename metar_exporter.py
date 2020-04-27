@@ -11,7 +11,7 @@ URL_PATTERN = "http://tgftp.nws.noaa.gov/data/observations/metar/stations/{}.TXT
 
 ## HANDLE ARGUMENTS
 parser = argparse.ArgumentParser()
-parser.add_argument('-s', '--station', action="append", help="Station ID(s)")
+parser.add_argument('-s', '--station', required=True, action="append", help="Station ID(s)")
 parser.add_argument('-o', '--output', required=False, help="Output File")
 args = parser.parse_args()
 
